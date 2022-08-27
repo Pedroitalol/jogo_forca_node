@@ -17,6 +17,7 @@ console.log(gerenciadorPalavra.RetornaQntdLetras());
 const Jogo = require("./Jogo");
 const jogo = new Jogo();
 while (!jogo.VerificaFimJogo()) {
+    console.log(jogo.RetornaPalavraAtual());
     jogo.PedePalpite();
-    console.log(jogo.RetornaPalavraAtual(), jogo.VerificaFimJogo());
 }
+console.log(jogo.RetornaPalavraAtual());

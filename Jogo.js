@@ -1,7 +1,6 @@
 const GerenciadorPalavra = require("./GerenciadorPalavra");
 
 module.exports = class Jogo {
-    //propriedades e funções da classe aqui
     constructor() {
         this.gerenciadorPalavra = new GerenciadorPalavra();
         this.qntdDicas = 0;
