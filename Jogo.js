@@ -19,10 +19,8 @@ module.exports = class Jogo {
         return this.gerenciadorPalavra.RetornaQntdLetras();
     }
 
-    PedePalpite(){
-        const readlineSync = require('readline-sync');
-        var palpite = readlineSync.question('Diga o palpite de uma letra? ');
-        console.log(this.VerificaLetra(palpite));
+    VerificaPalpite(letra){
+        console.log(this.VerificaLetra(letra));
     }
 
     VerificaLetra(letra){
