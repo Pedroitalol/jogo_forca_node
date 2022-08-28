@@ -1,4 +1,5 @@
 const GerenciadorPalavra = require("./GerenciadorPalavra");
+const ValidaEntradaUser = require("./ValidaEntradaUser");
 
 module.exports = class Jogo {
     constructor() {
@@ -24,13 +25,8 @@ module.exports = class Jogo {
     }
 
     VerificaLetra(letra){
-        var ret = '';
-        for (let i = 0; i < this.palavraAtual.length; i++) {
-            if(letra == this.gerenciadorPalavra.RetornaPalavra()[i]){
-                this.palavraAtual[i] = this.gerenciadorPalavra.RetornaPalavra()[i];
-                ret += 'Palavra certa na pocição ' + i + '\n';
-            }
-        }
+        const validaEntradaUser = new ValidaEntradaUser();
+        const ret = validaEntradaUser.validaEntrada( this.gerenciadorPalavra, this.palavraAtual, letra);
         return ret;
     }
 
